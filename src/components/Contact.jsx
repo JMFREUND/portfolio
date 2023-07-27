@@ -6,9 +6,7 @@ import email from "../images/mail_FILL0_wght400_GRAD0_opsz48.svg";
 import contact from "../images/undraw_message_sent_re_q2kl.svg";
 
 function Contact() {
-  const handleSubmit = (e) => {
-    e.preventDefault();
-  };
+
   return (
     <section className="contact" id="contact">
       <div className="contactTitle">

@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import hamburger from "../images/hamburger.svg";
 import MobileNav from "./MobileNav";
-import { Link as ScrollLink } from "react-scroll";
 
 
 function Navbar() {

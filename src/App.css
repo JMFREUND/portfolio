@@ -5,32 +5,31 @@ section {
   background-color: #121212;
 }
 
-
-h1{
+h1 {
   color: #bb86fc;
-  font-family: 'Bebas Neue', sans-serif;
+  font-family: "Bebas Neue", sans-serif;
   font-size: 6em;
   margin: 0;
 }
 
-h2{
+h2 {
   color: #bb86fc;
-  font-family: 'Bebas Neue', sans-serif;
+  font-family: "Bebas Neue", sans-serif;
   font-size: 3em;
 }
 
-h3{
+h3 {
   color: #bb86fc;
-  font-family: 'Bebas Neue', sans-serif;
+  font-family: "Bebas Neue", sans-serif;
   font-size: 1.5em;
 }
 p {
   color: white;
-  font-family: 'Source Code Pro', monospace;
+  font-family: "Source Code Pro", monospace;
 }
 
-a{
-  font-family: 'Source Code Pro', monospace;
+a {
+  font-family: "Source Code Pro", monospace;
 }
 
 /* Navbar */
@@ -83,6 +82,7 @@ a{
   display: flex;
   padding: 4em 3em;
   align-items: center;
+  justify-content: center;
 }
 
 .headerTxt {
@@ -113,25 +113,9 @@ a{
   border-radius: 50%;
   display: flex;
   justify-content: center;
-  align-items: flex-end;
+  align-items: center;
   box-shadow: 0 0 2em #bb86fc;
-  background: hsla(0, 0%, 100%, 1);
-
   background: radial-gradient(
-    circle,
-    hsla(0, 0%, 100%, 1) 10%,
-    hsla(267, 95%, 76%, 1) 43%,
-    hsla(258, 100%, 35%, 1) 100%
-  );
-
-  background: -moz-radial-gradient(
-    circle,
-    hsla(0, 0%, 100%, 1) 10%,
-    hsla(267, 95%, 76%, 1) 43%,
-    hsla(258, 100%, 35%, 1) 100%
-  );
-
-  background: -webkit-radial-gradient(
     circle,
     hsla(0, 0%, 100%, 1) 10%,
     hsla(267, 95%, 76%, 1) 43%,
@@ -140,8 +124,12 @@ a{
 }
 
 .headshot {
-  width: 70%;
-  object-fit: contain;
+  width: 22rem;
+  height: 22rem;
+  padding: 2em;
+  object-fit: cover;
+  border-radius: 50%;
+  object-position: 50% 30%;
 }
 
 /* Loader */
@@ -165,7 +153,6 @@ a{
   border-radius: 50%;
   animation: spin-anim 1.2s linear infinite;
 }
-
 
 @keyframes spin-anim {
   0% {
@@ -278,7 +265,7 @@ a{
   margin-top: 1.5em;
 }
 
-.card p{
+.card p {
   height: 10em;
 }
 

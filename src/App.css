@@ -1,3 +1,8 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -22,6 +27,11 @@ h3 {
   color: #bb86fc;
   font-family: "Bebas Neue", sans-serif;
   font-size: 1.5em;
+}
+h4 {
+  color: white;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 1.2em;
 }
 p {
   color: white;
@@ -290,20 +300,20 @@ button {
 
 .iconWrapper {
   background-color: #2d2d2d;
-  width: 4em;
-  height: 4em;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 1em;
-  padding: 0.5em;
+  margin-bottom: 2rem;
+  padding: 0.5rem;
   border-radius: 5px;
 }
 
 .projectIcon {
-  width: 3em;
-  filter: invert(100%) sepia(0%) saturate(7500%) hue-rotate(13deg)
-    brightness(106%) contrast(116%);
+  width: 100%;
+  height: 3rem;
+  object-fit: cover;
+  border-radius: 5px;
 }
 
 .projectIcon path {
@@ -317,6 +327,10 @@ button {
 }
 
 /* Project Modal */
+
+.googleIcon {
+  filter: brightness(0) invert(1);
+}
 
 .modalBg {
   position: fixed;
@@ -336,19 +350,59 @@ button {
   padding: 1.25rem;
   border-radius: 8px;
   width: 80%;
+  height: 50%;
   max-width: 80%;
   display: flex;
+  align-items: center;
   position: relative;
+  padding: 2rem;
 }
 
 .mockupWrapper {
   width: 50%;
 }
+
+.mockupWrapper button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
 .textWrapper {
   width: 50%;
   text-align: left;
 }
 
+.textWrapper > p {
+  margin: 1rem 0;
+}
+.skillWrapper {
+  display: grid;
+  grid-template-columns: 30% 30%;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+.skillWrapper > div {
+  padding: 0.5rem;
+  text-align: center;
+  color: white;
+  border: solid 1px white;
+  border-radius: 5px;
+}
+.mockupWrapper > div {
+  width: 20rem;
+  height: 20rem;
+  overflow: hidden;
+}
+
+.mockupWrapper > img {
+  width: 100%;
+  height: auto;
+  max-width: 20rem; /* Set the maximum width to the desired size */
+  object-fit: contain;
+  border-radius: 5px;
+}
 .modalBtn {
   position: absolute;
   background-color: inherit;
@@ -359,6 +413,9 @@ button {
   padding: 8px 16px;
   cursor: pointer;
   border-radius: 4px;
+}
+.modalBtn:hover {
+  color: #bb86fc;
 }
 
 /* ContactPage */

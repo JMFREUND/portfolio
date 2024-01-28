@@ -1,20 +1,24 @@
 import React from "react";
+import arrow from "../images/arrowBackIcon.svg";
 
 function ProjectModal({ project, closeModal }) {
+  console.log(project);
   return (
     <div className="modalBg">
       <div className="modal">
         <div className="mockupWrapper">
           <button className="modalBtn" onClick={closeModal}>
-            Back
+            <img src={arrow} alt="" className="googleIcon" /> Back
           </button>
-          <img src="" alt="" />
+          {/* <div>
+            {" "} */}
+          <img src={project.mockup} alt="project-mockup" />
+          {/* </div> */}
         </div>
         <div className="textWrapper">
           <h3>{project.title}</h3>
           <p>{project.description}</p>
           <div className="skillWrapper">
-            <h4>Technologies:</h4>
             {project.skills.map((skill, index) => (
               <div key={index}>{skill}</div>
             ))}

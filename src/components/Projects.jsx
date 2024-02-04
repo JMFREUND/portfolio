@@ -1,9 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import food from "../images/Steak.svg";
 import art from "../images/Arts.svg";
 import shop from "../images/Ecommerce.svg";
-import ProjectModal from "./ProjectModal";
 import AagMockup from "../images/aagMockup.png";
 import DynerMockup from "../images/dynerMockup.png";
 import LendistaMockup from "../images/lendistaMockup.png";
@@ -12,9 +11,6 @@ import dynerLogo from "../images/dynerLogo.png";
 import lendistaLogo from "../images/lendistaLogo.jpg";
 
 function Projects() {
-  const [popup, setPopup] = useState(false);
-  const [selectedProject, setSelectedProject] = useState(null);
-
   const projects = [
     {
       title: "Animal Art Gallery",
@@ -55,11 +51,6 @@ function Projects() {
     },
   ];
 
-  const closeModal = () => {
-    setSelectedProject(null);
-    setPopup(false);
-  };
-
   return (
     <section className="projects" id="projects">
       <h2>My Projects.</h2>
@@ -77,9 +68,6 @@ function Projects() {
             </Link>
           </div>
         ))}
-        {popup && (
-          <ProjectModal project={selectedProject} closeModal={closeModal} />
-        )}
       </div>
     </section>
   );

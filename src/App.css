@@ -2,7 +2,9 @@
   padding: 0;
   margin: 0;
 }
-
+body {
+  background-color: #121212;
+}
 html {
   scroll-behavior: smooth;
 }
@@ -184,7 +186,11 @@ button {
 }
 
 .aboutMeTxt h2 {
-  margin: 0 2em 0 0;
+  margin-bottom: 1rem;
+}
+
+.aboutMeTxt h3 {
+  margin: 1rem 0;
 }
 
 .aboutMeImg {
@@ -207,12 +213,12 @@ button {
 }
 
 .skills {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: auto auto auto;
   background-color: #2d2d2d;
   padding: 1em 0.5em;
   border-radius: 5px;
+  margin-top: 2rem;
 }
 
 .techSkill {
@@ -627,18 +633,14 @@ input {
   }
 
   .skills {
-    margin: 3em auto 0 auto;
-    max-width: 100%;
+    grid-template-columns: 50% 50%;
     justify-content: space-evenly;
   }
 
   .techSkill {
     padding: 0.5em;
-    width: 35%;
     margin: 0.5em;
-    font-size: 0.5em;
   }
-
   /* Projects */
   .projects {
     padding: 6em 1em 1em 1em;
@@ -760,13 +762,17 @@ input {
   /* Projects */
   .cardWrapper {
     flex-direction: column;
+    align-items: center;
   }
   .card {
     width: 70%;
+    min-height: 10rem;
     margin: 1em;
   }
 
   .card p {
     width: 90%;
+    height: 20%;
+    margin-bottom: 2rem;
   }
 }

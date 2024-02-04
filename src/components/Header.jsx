@@ -1,5 +1,5 @@
 import React from "react";
-import headshot from "../images/My project-1 (1).png";
+import headshot from "../images/headshot.png";
 
 function Header() {
   return (
@@ -8,13 +8,16 @@ function Header() {
         <p>FULLSTACK DEVELOPER</p>
         <h1>Jessica-Maria Freund</h1>
         <p>
-         I'm a passionate fullstack developer, looking to use my creativity and problem-solving skills to create beautiful user-friendly products.
-         <br/> Let's connect! 
+          I'm a passionate fullstack developer, looking to use my creativity and
+          problem-solving skills to create beautiful user-friendly products.
+          <br /> Let's connect!
         </p>
-        <a className="btn" href="./#contact">Get in touch</a>
+        <a className="btn" href="./#contact">
+          Get in touch
+        </a>
       </div>
       <div className="headerImg">
-      <img src={headshot} alt="" className="headshot"/>
+        <img src={headshot} alt="" className="headshot" loading="eager" />
       </div>
     </section>
   );

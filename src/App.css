@@ -1,3 +1,10 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+body {
+  background-color: #121212;
+}
 html {
   scroll-behavior: smooth;
 }
@@ -5,32 +12,42 @@ section {
   background-color: #121212;
 }
 
-
-h1{
+h1 {
   color: #bb86fc;
-  font-family: 'Bebas Neue', sans-serif;
+  font-family: "Bebas Neue", sans-serif;
   font-size: 6em;
   margin: 0;
 }
 
-h2{
+h2 {
   color: #bb86fc;
-  font-family: 'Bebas Neue', sans-serif;
+  font-family: "Bebas Neue", sans-serif;
   font-size: 3em;
 }
 
-h3{
+h3 {
   color: #bb86fc;
-  font-family: 'Bebas Neue', sans-serif;
+  font-family: "Bebas Neue", sans-serif;
   font-size: 1.5em;
+}
+h4 {
+  color: white;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 1.2em;
+}
+h4 {
+  color: white;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 1.2em;
 }
 p {
   color: white;
-  font-family: 'Source Code Pro', monospace;
+  font-family: "Source Code Pro", monospace;
 }
 
-a{
-  font-family: 'Source Code Pro', monospace;
+a,
+button {
+  font-family: "Source Code Pro", monospace;
 }
 
 /* Navbar */
@@ -83,6 +100,7 @@ a{
   display: flex;
   padding: 4em 3em;
   align-items: center;
+  justify-content: center;
 }
 
 .headerTxt {
@@ -108,30 +126,16 @@ a{
 }
 
 .headerImg {
-  width: 30em;
-  height: 30em;
+  width: 30rem;
+  height: 30rem;
+  width: 30rem;
+  height: 30rem;
   border-radius: 50%;
   display: flex;
   justify-content: center;
-  align-items: flex-end;
+  align-items: center;
   box-shadow: 0 0 2em #bb86fc;
-  background: hsla(0, 0%, 100%, 1);
-
   background: radial-gradient(
-    circle,
-    hsla(0, 0%, 100%, 1) 10%,
-    hsla(267, 95%, 76%, 1) 43%,
-    hsla(258, 100%, 35%, 1) 100%
-  );
-
-  background: -moz-radial-gradient(
-    circle,
-    hsla(0, 0%, 100%, 1) 10%,
-    hsla(267, 95%, 76%, 1) 43%,
-    hsla(258, 100%, 35%, 1) 100%
-  );
-
-  background: -webkit-radial-gradient(
     circle,
     hsla(0, 0%, 100%, 1) 10%,
     hsla(267, 95%, 76%, 1) 43%,
@@ -140,8 +144,12 @@ a{
 }
 
 .headshot {
-  width: 70%;
-  object-fit: contain;
+  width: 22rem;
+  height: 22rem;
+  padding: 2em;
+  object-fit: cover;
+  border-radius: 50%;
+  object-position: 50% 30%;
 }
 
 /* Loader */
@@ -166,7 +174,6 @@ a{
   animation: spin-anim 1.2s linear infinite;
 }
 
-
 @keyframes spin-anim {
   0% {
     transform: rotate(0deg);
@@ -186,7 +193,11 @@ a{
 }
 
 .aboutMeTxt h2 {
-  margin: 0 2em 0 0;
+  margin-bottom: 1rem;
+}
+
+.aboutMeTxt h3 {
+  margin: 1rem 0;
 }
 
 .aboutMeImg {
@@ -209,12 +220,12 @@ a{
 }
 
 .skills {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: auto auto auto;
   background-color: #2d2d2d;
   padding: 1em 0.5em;
   border-radius: 5px;
+  margin-top: 2rem;
 }
 
 .techSkill {
@@ -248,60 +259,175 @@ a{
 .cardWrapper {
   display: flex;
   justify-content: space-evenly;
-  align-items: center;
+  align-items: stretch;
 }
 
 .card {
-  width: 20%;
-  min-height: 18em;
+  width: 18%;
+  min-height: 22rem;
   border-radius: 10px;
   overflow: hidden;
   padding: 3em 2em;
   text-align: left;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: flex-start;
   background-color: #1e1e1e;
 }
 
 .card h3 {
-  margin: 0;
+  margin: 1rem 0;
 }
+
+.card p {
+  height: 30%;
+  max-height: 15rem;
+  margin-bottom: 20%;
+}
+
 .card a {
   display: inline-block;
   text-decoration: none;
-  color: white;
-  background-color: #3700b3;
-  padding: 0.5em 2em;
+  padding: 0.5em 1em;
   border-radius: 5px;
   margin-top: 1.5em;
+  border-style: none;
+  font-size: 1rem;
+  padding: 0.5em 1em;
+  border-radius: 5px;
+  margin-top: 1.5em;
+  border-style: none;
+  font-size: 1rem;
+  color: white;
+  background-color: #3700b3;
+  justify-self: center;
 }
 
-.card p{
-  height: 10em;
+.card button:hover {
+  color: #bb86fc;
+  cursor: pointer;
 }
 
 .iconWrapper {
+  align-items: center;
   background-color: #2d2d2d;
-  width: 4em;
-  height: 4em;
+  width: 4rem;
+  height: 4rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 1em;
-  padding: 0.5em;
+  margin-bottom: 1rem;
+  padding: 0.5rem;
   border-radius: 5px;
 }
 
 .projectIcon {
-  width: 3em;
+  width: 3rem;
   filter: invert(100%) sepia(0%) saturate(7500%) hue-rotate(13deg)
     brightness(106%) contrast(116%);
 }
 
 .projectIcon path {
   fill: #a91079;
+}
+
+/* .projectBtnWrapper {
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+} */
+
+/* Project Modal */
+
+.googleIcon {
+  filter: brightness(0) invert(1);
+}
+
+.modalBg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.modal {
+  background: #1e1e1e;
+  padding: 1.25rem;
+  border-radius: 8px;
+  width: 80%;
+  height: 50%;
+  max-width: 80%;
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding: 2rem;
+}
+
+.mockupWrapper {
+  width: 50%;
+}
+
+.mockupWrapper button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.textWrapper {
+  width: 50%;
+  text-align: left;
+}
+
+.textWrapper > p {
+  margin: 1rem 0;
+}
+.skillWrapper {
+  display: grid;
+  grid-template-columns: 30% 30%;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+.skillWrapper > div {
+  padding: 0.5rem;
+  text-align: center;
+  color: white;
+  border: solid 1px white;
+  border-radius: 5px;
+}
+.mockupWrapper > div {
+  width: 20rem;
+  height: 20rem;
+  overflow: hidden;
+}
+
+.mockupWrapper > img {
+  width: 100%;
+  height: auto;
+  max-width: 20rem; /* Set the maximum width to the desired size */
+  object-fit: contain;
+  border-radius: 5px;
+}
+.modalBtn {
+  position: absolute;
+  background-color: inherit;
+  top: 10px;
+  left: 10px;
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+.modalBtn:hover {
+  color: #bb86fc;
 }
 
 /* ContactPage */
@@ -429,7 +555,7 @@ input {
 }
 
 /* Mobile */
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 768px) {
   /* NavMobile */
 
   .hamburger {
@@ -492,10 +618,13 @@ input {
   }
 
   .headerImg {
-    width: 15em;
-    height: 15em;
+    width: 20em;
+    height: 20em;
   }
-
+  .headshot {
+    width: 15rem;
+    height: 15rem;
+  }
   /* AboutMe */
 
   .aboutMe {
@@ -516,18 +645,14 @@ input {
   }
 
   .skills {
-    margin: 3em auto 0 auto;
-    max-width: 100%;
+    grid-template-columns: 50% 50%;
     justify-content: space-evenly;
   }
 
   .techSkill {
     padding: 0.5em;
-    width: 35%;
     margin: 0.5em;
-    font-size: 0.5em;
   }
-
   /* Projects */
   .projects {
     padding: 6em 1em 1em 1em;
@@ -617,16 +742,18 @@ input {
   }
   /* Header */
   .headerImg {
-    width: 20em;
-    height: 20em;
+    width: 20rem;
+    height: 20rem;
   }
 
   .headshot {
-    width: 60%;
+    width: 15rem;
+    height: 15rem;
   }
 
   .header {
     flex-direction: column-reverse;
+    align-items: flex-start;
   }
 
   .headerTxt {
@@ -647,13 +774,17 @@ input {
   /* Projects */
   .cardWrapper {
     flex-direction: column;
+    align-items: center;
   }
   .card {
     width: 70%;
+    min-height: 10rem;
     margin: 1em;
   }
 
   .card p {
     width: 90%;
+    height: 20%;
+    margin-bottom: 2rem;
   }
 }

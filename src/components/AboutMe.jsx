@@ -7,7 +7,6 @@ import react from "../images/icons8-react-native.svg";
 import nodeIcon from "../images/icons8-nodejs-32.png";
 import expressIcon from "../images/icons8-express-js.svg";
 import git from "../images/icons8-git.svg";
-import github from "../images/icons8-github (1).svg";
 import postgres from "../images/icons8-postgresql.svg";
 import typescript from "../images/icons8-typescript.svg";
 

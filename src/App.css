@@ -35,6 +35,11 @@ h4 {
   font-family: "Bebas Neue", sans-serif;
   font-size: 1.2em;
 }
+h4 {
+  color: white;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 1.2em;
+}
 p {
   color: white;
   font-family: "Source Code Pro", monospace;
@@ -121,6 +126,8 @@ button {
 }
 
 .headerImg {
+  width: 30rem;
+  height: 30rem;
   width: 30rem;
   height: 30rem;
   border-radius: 50%;
@@ -282,6 +289,11 @@ button {
 .card a {
   display: inline-block;
   text-decoration: none;
+  padding: 0.5em 1em;
+  border-radius: 5px;
+  margin-top: 1.5em;
+  border-style: none;
+  font-size: 1rem;
   padding: 0.5em 1em;
   border-radius: 5px;
   margin-top: 1.5em;

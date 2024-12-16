@@ -3,15 +3,17 @@ import Header from "../components/Header";
 import AboutMe from "../components/AboutMe";
 import Projects from "../components/Projects";
 import Contact from "../components/Contact";
+import UnderConstruction from "../components/UnderConstruction";
 
 function HomePage() {
   return (
-    <div>
-      <Header />
+    <>
+      <UnderConstruction />
+      {/* <Header />
       <Projects />
-      <AboutMe />
-      <Contact />
-    </div>
+      <AboutMe />s
+      <Contact /> */}
+    </>
   );
 }
 

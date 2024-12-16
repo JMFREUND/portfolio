@@ -19,7 +19,7 @@ function App() {
       ) : (
         <>
           {" "}
-          <Navbar></Navbar>
+          {/* <Navbar></Navbar> */}
           <Routes>
             <Route path="/" element={<HomePage />} />
           </Routes>
